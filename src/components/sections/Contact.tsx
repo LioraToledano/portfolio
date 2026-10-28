@@ -3,11 +3,11 @@ import { ArrowUpRight, Check, Download, Phone, Sparkles } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Button } from '../ui/Button'
 import { CV_FILENAME, CV_URL } from '../../data/cv'
-import { api, ApiError } from '../../lib/api'
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const FORMSPREE_URL = 'https://formspree.io/f/maeejkpb'
 
 export function Contact() {
   const formRef = useRef<HTMLFormElement>(null)
@@ -31,7 +31,7 @@ export function Contact() {
     const message = String(data.get('message') ?? '').trim()
 
     // Champ invisible rempli uniquement par les robots : on fait semblant d'avoir envoyé
-    if (data.get('website')) {
+    if (data.get('_gotcha')) {
       setStatus('success')
       formRef.current.reset()
       return
@@ -44,15 +44,21 @@ export function Contact() {
     setStatus('loading')
 
     try {
-      await api.sendMessage({ name, company, email, message, website: '' })
-      setStatus('success')
-      formRef.current?.reset()
-    } catch (error) {
-      fail(
-        error instanceof ApiError && error.status >= 400 && error.status < 500
-          ? error.message
-          : "Une erreur s'est produite. Réessayez ou écrivez-moi directement.",
-      )
+      const response = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: JSON.stringify({ name, company, email: email, message }),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        formRef.current?.reset()
+      } else {
+        const json = await response.json().catch(() => ({}))
+        fail((json as { error?: string }).error ?? "Une erreur s'est produite. Réessayez ou écrivez-moi directement.")
+      }
+    } catch {
+      fail("Une erreur s'est produite. Réessayez ou écrivez-moi directement.")
     }
   }
 
@@ -240,8 +246,8 @@ export function Contact() {
 
                       {/* Piège à robots : invisible pour les humains */}
                       <div className="absolute left-[-9999px]" aria-hidden="true">
-                        <label htmlFor="website">Site web</label>
-                        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+                        <label htmlFor="_gotcha">Site web</label>
+                        <input id="_gotcha" name="_gotcha" type="text" tabIndex={-1} autoComplete="off" />
                       </div>
 
                       {status === 'error' && (

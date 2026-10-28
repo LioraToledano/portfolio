@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+*.log
+.aider*
+
+# Configuration de l API PHP (mot de passe MySQL)
+api/config.php

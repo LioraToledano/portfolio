@@ -1,0 +1,5 @@
+# Empêche de télécharger les fichiers de configuration et le socle de l'API
+<FilesMatch "^(config\.php|config\.example\.php|bootstrap\.php)$">
+  Require all denied
+</FilesMatch>
+Options -Indexes

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
-import type { ReactNode } from 'react'
-import { Code2, GraduationCap, Palette, Puzzle, Sparkles } from 'lucide-react'
+import { GraduationCap } from 'lucide-react'
 
 const experiences = [
   {
@@ -224,8 +223,10 @@ export function About() {
             >
               <p className="text-xl font-semibold leading-8 md:text-2xl">
                 Développeuse Full-Stack, je conçois des applications web de
-                bout en bout. J'aime autant structurer une logique métier
-                solide que soigner chaque détail d'une interface.
+                bout en bout. Mon langage de prédilection est{' '}
+                <b className="text-[#443744]">PHP</b>, avec lequel je structure
+                des API robustes et des back-ends maintenables — et j'apporte
+                la même rigueur à chaque couche du produit.
               </p>
 
               <div className="mt-7 grid gap-6 md:grid-cols-2">
@@ -756,31 +757,6 @@ function SectionIntro({
   )
 }
 
-function Feature({
-                   icon,
-                   title,
-                   text,
-                 }: {
-  icon: ReactNode
-  title: string
-  text: string
-}) {
-  return (
-      <div className="flex gap-3 rounded-2xl border border-white/20 bg-white/10 p-4">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/15 text-white">
-        {icon}
-      </span>
-
-        <div>
-          <p className="text-sm font-bold">{title}</p>
-
-          <p className="mt-1 text-xs leading-5 text-white/70">
-            {text}
-          </p>
-        </div>
-      </div>
-  )
-}
 
 function SkillCard({
                      title,

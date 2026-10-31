@@ -73,12 +73,7 @@ export function Hero() {
                             transition={{ delay: 0.25, duration: 0.6 }}
                             className="mt-8 max-w-2xl text-lg font-semibold leading-8 sm:text-xl md:text-2xl"
                         >
-                            Je développe des applications web qui ont{' '}
-                            <span className="relative whitespace-nowrap">
-                une personnalité
-                <span className="absolute -bottom-1 left-0 h-1.5 w-full rounded-full bg-[#efb09d]/75" />
-              </span>
-                            .
+                            Je développe des applications web robustes, du serveur à l'écran.
                         </motion.p>
 
                         <motion.p
@@ -87,8 +82,7 @@ export function Hero() {
                             transition={{ delay: 0.38, duration: 0.6 }}
                             className="mt-4 max-w-xl text-sm leading-7 text-[#7d737d] sm:text-base"
                         >
-                            De l'API jusqu'à l'interface, je construis des produits fiables,
-                            soignés et pensés pour celles et ceux qui les utilisent.
+                            J'aime comprendre un besoin, le modéliser, le coder et le livrer.
                         </motion.p>
 
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

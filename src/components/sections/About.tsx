@@ -79,6 +79,9 @@ const backend = [
   'Spring Boot (Java)',
   'Node.js',
   'API REST',
+]
+
+const database = [
   'MySQL / MariaDB',
   'PostgreSQL',
   'MongoDB',
@@ -124,7 +127,8 @@ const formations = [
     year: '2024 – 2026',
     degree: 'MSc Pro — Expert IA / Data (Bac+5)',
     school: 'Epitech · Le Kremlin-Bicêtre',
-    detail: 'Master informatique : développement web et logiciel.',
+    detail:
+      'Spécialisation en intelligence artificielle appliquée : machine learning, NLP, vision par ordinateur et intégration de modèles dans des architectures back-end. Projets menés en équipe sur des problématiques réelles — de l\'ingestion de données brutes à la mise en production d\'un pipeline ML.',
     color: '#f39a62',
     tone: '#b85c2b',
   },
@@ -133,7 +137,7 @@ const formations = [
     degree: 'Pre-MSc (Bac+3)',
     school: 'Epitech · Le Kremlin-Bicêtre',
     detail:
-        "Architecte logiciel – développeur d'applications, spécialisation full-stack.",
+      'Année dédiée à l\'architecture logicielle : conception de systèmes back-end robustes, API RESTful, patrons de conception (MVC, Repository, SOLID). Formation intensive par projets, avec des livraisons revues par des professionnels de l\'industrie — une exigence qui a structuré ma rigueur technique.',
     color: '#e98b9b',
     tone: '#b0596a',
   },
@@ -142,7 +146,7 @@ const formations = [
     degree: 'BTS SIO — option SLAM (Bac+2)',
     school: 'ORT Daniel Mayer · Montreuil',
     detail:
-        'Services Informatiques aux Organisations, spécialité développement. Deuxième année en alternance.',
+      'Fondamentaux du développement logiciel : PHP, Java, algorithmes, bases de données SQL et conception d\'applications. En deuxième année, alternance chez CashNow — première immersion dans un environnement Agile/Scrum, avec des sprints, des code reviews et une exposition directe au cycle de vie d\'un produit SaaS.',
     color: '#b6a2d9',
     tone: '#72589e',
   },
@@ -151,11 +155,41 @@ const formations = [
     degree: 'Baccalauréat STMG — option SIG',
     school: 'ORT Daniel Mayer · Montreuil',
     detail:
-        "Sciences et technologies du management et de la gestion, option systèmes d'information de gestion.",
+      'Baccalauréat technologique orienté systèmes d\'information : introduction à la programmation, modélisation de bases de données et analyse des processus métier. Le point de départ qui a confirmé ma direction vers l\'informatique et la conception de systèmes.',
     color: '#b9d8c4',
     tone: '#3f7a58',
   },
 ]
+
+const kw = (s: string) => `<span style="color:#89b4fa">${s}</span>`
+const fn = (s: string) => `<span style="color:#a6e3a1">${s}</span>`
+const cl = (s: string) => `<span style="color:#f38ba8">${s}</span>`
+const va = (s: string) => `<span style="color:#fab387">${s}</span>`
+const st = (s: string) => `<span style="color:#f9e2af">${s}</span>`
+const cm = (s: string) => `<span style="color:#6c7086">${s}</span>`
+const tx = (s: string) => `<span style="color:#cdd6f4">${s}</span>`
+
+const PHP_CODE = [
+  `<span style="color:#636da6">&lt;?php</span>`,
+  ``,
+  `${kw('namespace')} ${tx('App\\\\Controller;')}`,
+  ``,
+  `${kw('class')} ${cl('DevController')}`,
+  `${tx('{')}`,
+  `    ${kw('private string')} ${va('$name')}  ${tx(`= '`)}${st('Liora Toledano')}${tx(`';`)}`,
+  `    ${kw('private string')} ${va('$lang')}  ${tx(`= '`)}${st('PHP · Symfony · Java')}${tx(`';`)}`,
+  ``,
+  `    ${cm('// disponibilité &amp; type de contrat')}`,
+  `    ${kw('public function')} ${fn('status')}${tx('(): array')}`,
+  `    ${tx('{')}`,
+  `        ${kw('return')} ${tx('[')}`,
+  `            ${tx(`'`)}${fn('disponible')}${tx(`'`)}  ${tx(`=>`)} ${kw('true')}${tx(',')}`,
+  `            ${tx(`'`)}${fn('type')}${tx(`'`)}       ${tx(`=> '`)}${st('CDI')}${tx(`',`)}`,
+  `            ${tx(`'`)}${fn('profil')}${tx(`'`)}     ${tx(`=> '`)}${st('Full-Stack')}${tx(`',`)}`,
+  `        ${tx('];')}`,
+  `    ${tx('}')}`,
+  `${tx('}')}`,
+].join('\n')
 
 export function About() {
   return (
@@ -226,46 +260,19 @@ export function About() {
                 whileInView={{ opacity: 1, scale: 1, rotate: 1 }}
                 viewport={{ once: true }}
                 whileHover={{ rotate: -1, y: -5 }}
-                className="relative overflow-hidden rounded-[2rem] p-8 text-white lg:col-span-5"
-                style={{
-                  background: 'linear-gradient(135deg, #e98b9b, #f1b095)',
-                }}
+                className="relative overflow-hidden rounded-[2rem] lg:col-span-5"
+                style={{ background: '#1e1e2e' }}
             >
-              <Sparkles
-                  className="absolute right-7 top-7 h-7 w-7 text-white/70"
-              />
-
-              <p className="text-xs font-bold uppercase tracking-[.18em] text-white/70">
-                Ce qui me définit
-              </p>
-
-              <h3 className="mt-5 text-4xl font-black leading-[.95] md:text-5xl">
-                Créative.
-                <br />
-                Technique.
-                <br />
-                Curieuse.
-              </h3>
-
-              <div className="mt-10 grid gap-3">
-                <Feature
-                    icon={<Palette />}
-                    title="Un œil créatif"
-                    text="Des couleurs à la mise en page, rien n'est laissé au hasard."
-                />
-
-                <Feature
-                    icon={<Code2 />}
-                    title="Du back au front"
-                    text="API, bases de données et interfaces modernes."
-                />
-
-                <Feature
-                    icon={<Puzzle />}
-                    title="Une vision produit"
-                    text="Du besoin utilisateur jusqu'à la mise en production."
-                />
+              <div className="flex items-center gap-2 px-5 py-3.5" style={{ borderBottom: '1px solid rgba(255,255,255,.07)' }}>
+                <span className="h-3 w-3 rounded-full bg-[#e98b9b]" />
+                <span className="h-3 w-3 rounded-full bg-[#f1b095]" />
+                <span className="h-3 w-3 rounded-full bg-[#b9d8c4]" />
+                <span className="ml-3 text-[11px] font-mono text-white/30">DevController.php</span>
               </div>
+              <pre
+                className="overflow-x-auto p-6 text-[12.5px] leading-[1.85] font-mono md:p-8 md:text-[13px]"
+                dangerouslySetInnerHTML={{ __html: PHP_CODE }}
+              />
             </motion.div>
           </div>
 
@@ -471,11 +478,19 @@ export function About() {
               />
 
               <SkillCard
+                  title="Base de données"
+                  subtitle="Stockage"
+                  skills={database}
+                  color="#9dc9ac"
+                  className="lg:col-span-1"
+              />
+
+              <SkillCard
                   title="Front-End"
                   subtitle="Interfaces"
                   skills={frontend}
                   color="#e98b9b"
-                  className="lg:col-span-2"
+                  className="lg:col-span-1"
               />
 
               {/* Puis 2 colonnes */}

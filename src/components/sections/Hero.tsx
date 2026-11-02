@@ -18,7 +18,7 @@ export function Hero() {
     return (
         <section
             ref={ref}
-            className="relative min-h-screen overflow-x-hidden pt-24"
+            className="relative min-h-screen pt-24"
             aria-label="Présentation"
         >
             <motion.div
@@ -60,7 +60,7 @@ export function Hero() {
                                 duration: 0.8,
                                 ease: [0.22, 1, 0.36, 1],
                             }}
-                            className="font-display max-w-full text-[clamp(3rem,14vw,4.5rem)] font-black leading-[.8] sm:text-[clamp(3.5rem,9vw,5.8rem)] lg:text-[clamp(3.5rem,5vw,5.8rem)]"
+                            className="font-display max-w-full text-[clamp(3rem,14vw,4.5rem)] font-black leading-[.8] sm:text-[clamp(4rem,10vw,6.5rem)] lg:text-[clamp(4rem,6vw,6.5rem)]"
                         >
                             LIORA
                             <br />

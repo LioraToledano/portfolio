@@ -60,7 +60,7 @@ export function Hero() {
                                 duration: 0.8,
                                 ease: [0.22, 1, 0.36, 1],
                             }}
-                            className="font-display max-w-full text-[clamp(3.05rem,16vw,4.8rem)] font-black leading-[.8] tracking-[-.07em] sm:text-[clamp(4rem,12vw,7.2rem)] lg:text-[clamp(4rem,8vw,7.2rem)]"
+                            className="font-display max-w-full text-[clamp(3.05rem,16vw,4.8rem)] font-black leading-[.8] tracking-[-.07em] sm:text-[clamp(4rem,12vw,7.2rem)] lg:text-[clamp(4rem,8vw,7.2rem)] pr-2"
                         >
                             LIORA
                             <br />

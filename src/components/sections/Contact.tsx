@@ -105,11 +105,6 @@ export function Contact() {
                 attention portée au code qu'à l'expérience.
               </p>
 
-              <p className="mt-4 max-w-lg text-sm leading-6 text-white/55 md:text-[15px] md:leading-7">
-                PHP, Java, Python, React, TypeScript : je passe naturellement du
-                serveur à l'interface, ce qui facilite le travail avec les
-                équipes back, front et design.
-              </p>
 
               <div className="mt-6 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2.5">
               <span className="relative flex h-2.5 w-2.5">

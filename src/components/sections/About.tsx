@@ -9,8 +9,8 @@ const experiences = [
     location: 'Boulogne-Billancourt',
     role: 'Développeuse Full-Stack · Alternance',
     description:
-        "Évolution d'un logiciel SaaS de recouvrement de créances : conception de nouvelles fonctionnalités en Symfony et React, maintenance et amélioration continue de l'existant.",
-    stack: ['React', 'TypeScript', 'Symfony', 'Sonata', 'MariaDB'],
+        "Développement et évolution d'une plateforme SaaS financière dédiée au recouvrement de créances. Nouvelles fonctionnalités, incidents en production, logiques métier complexes et évolution de l'architecture existante — dans un environnement Agile, avec de vraies contraintes de fiabilité et de livraison.",
+    stack: ['PHP', 'Symfony', 'React', 'TypeScript', 'MariaDB', 'Docker', 'Mailhog', 'Grafana', 'Jira', 'Confluence'],
     color: '#b6a2d9',
   },
   {
@@ -20,7 +20,7 @@ const experiences = [
     location: 'Espagne',
     role: 'Développeuse Full-Stack · Alternance',
     description:
-        "Conception et développement d'un site hôtelier, avec un parcours de réservation complet : du choix de la chambre jusqu'au paiement en ligne via Stripe.",
+        "Conception et développement d'un site hôtelier complet au sein d'une équipe de deux développeurs. De la maquette au paiement en ligne via Stripe, en passant par le moteur de réservation, la gestion des disponibilités et l'interface d'administration — une vraie responsabilité sur l'ensemble du produit.",
     stack: [
       'Laravel',
       'React',
@@ -38,7 +38,7 @@ const experiences = [
     location: 'Courbevoie',
     role: 'Développeuse Full-Stack · Stage',
     description:
-        "Refonte complète du site web pour le rendre plus rapide et offrir une navigation plus fluide.",
+        "Refonte complète du site web d'une association, avec un objectif clair : rendre la navigation simple et intuitive pour tous les utilisateurs. Restructuration de l'arborescence des pages, modernisation du design, amélioration des performances — pour un site plus lisible, plus accessible et plus agréable à utiliser.",
     stack: ['WordPress', 'Elementor', 'JavaScript'],
     color: '#e98b9b',
   },
@@ -56,7 +56,6 @@ const frontend = [
   'jQuery',
   'AJAX',
   'Three.js',
-  'Framer Motion',
   'React Native',
   'Cordova',
 ]
@@ -65,10 +64,6 @@ const design = [
   'Figma',
   'Canva',
   'Maquettage',
-  'UI / UX',
-  'Design systems',
-  'Responsive design',
-  'Accessibilité',
 ]
 
 const backend = [
@@ -90,13 +85,6 @@ const data = [
   'Claude Code',
   'GitHub Copilot',
   'Codex',
-  'LLM',
-  'Machine Learning',
-  'Reinforcement Learning',
-  'TensorFlow / Keras',
-  'Pandas',
-  'NumPy',
-  'OpenCV',
 ]
 
 const tools = [
@@ -123,29 +111,20 @@ const project = [
 
 const formations = [
   {
-    year: '2024 – 2026',
-    degree: 'MSc Pro — Expert IA / Data (Bac+5)',
+    year: '2023 – 2026',
+    degree: 'Pre-MSc & MSc Pro — Expert IA / Data (Bac+5)',
     school: 'Epitech · Le Kremlin-Bicêtre',
     detail:
-      'Spécialisation en intelligence artificielle appliquée : machine learning, NLP, vision par ordinateur et intégration de modèles dans des architectures back-end. Projets menés en équipe sur des problématiques réelles — de l\'ingestion de données brutes à la mise en production d\'un pipeline ML.',
+      'Un cursus de trois ans à Epitech, centré sur le développement informatique et la conception logicielle. La formation repose sur une approche pratique, avec des projets réguliers évalués par des professionnels. Les deux années de Master permettent d\'approfondir différents domaines du développement, avec une spécialisation en IA et Big Data.',
     color: '#f39a62',
     tone: '#b85c2b',
-  },
-  {
-    year: '2023 – 2024',
-    degree: 'Pre-MSc (Bac+3)',
-    school: 'Epitech · Le Kremlin-Bicêtre',
-    detail:
-      'Année dédiée à l\'architecture logicielle : conception de systèmes back-end robustes, API RESTful, patrons de conception (MVC, Repository, SOLID). Formation intensive par projets, avec des livraisons revues par des professionnels de l\'industrie — une exigence qui a structuré ma rigueur technique.',
-    color: '#e98b9b',
-    tone: '#b0596a',
   },
   {
     year: '2021 – 2023',
     degree: 'BTS SIO — option SLAM (Bac+2)',
     school: 'ORT Daniel Mayer · Montreuil',
     detail:
-      'Fondamentaux du développement logiciel : PHP, Java, algorithmes, bases de données SQL et conception d\'applications. En deuxième année, alternance chez CashNow — première immersion dans un environnement Agile/Scrum, avec des sprints, des code reviews et une exposition directe au cycle de vie d\'un produit SaaS.',
+      'Les bases du développement logiciel : PHP, Java, algorithmes, SQL, conception d\'applications. En deuxième année, une alternance chez Azgar Promotion — ma première expérience en équipe, avec de vraies livraisons, de vraies décisions et une première confrontation avec le monde professionnel.',
     color: '#b6a2d9',
     tone: '#72589e',
   },
@@ -154,7 +133,7 @@ const formations = [
     degree: 'Baccalauréat STMG — option SIG',
     school: 'ORT Daniel Mayer · Montreuil',
     detail:
-      'Baccalauréat technologique orienté systèmes d\'information : introduction à la programmation, modélisation de bases de données et analyse des processus métier. Le point de départ qui a confirmé ma direction vers l\'informatique et la conception de systèmes.',
+      'Baccalauréat technologique orienté gestion et systèmes d\'information. L\'option SIG m\'a initiée aux bases de données, aux outils informatiques et à la logique des systèmes — sans encore toucher au code, mais c\'est là que l\'envie a commencé.',
     color: '#b9d8c4',
     tone: '#3f7a58',
   },
@@ -210,7 +189,7 @@ export function About() {
           <SectionIntro
               number="01"
               eyebrow="À PROPOS"
-              title="Pas juste du code. Une façon de penser le produit."
+              title="Penser. Concevoir. Construire."
           />
 
           <div className="mt-14 grid gap-5 lg:grid-cols-12">
@@ -222,11 +201,9 @@ export function About() {
                 style={{ borderColor: 'var(--color-border)' }}
             >
               <p className="text-xl font-semibold leading-8 md:text-2xl">
-                Développeuse Full-Stack, je conçois des applications web de
-                bout en bout. Mon langage de prédilection est{' '}
-                <b className="text-[#443744]">PHP</b>, avec lequel je structure
-                des API robustes et des back-ends maintenables — et j'apporte
-                la même rigueur à chaque couche du produit.
+                Passionnée par le front-end, rigoureuse côté back.{' '}
+                <b className="text-[#443744]">PHP</b> et{' '}
+                <b className="text-[#443744]">React</b> — ma stack de référence.
               </p>
 
               <div className="mt-7 grid gap-6 md:grid-cols-2">
@@ -281,7 +258,7 @@ export function About() {
             <SectionIntro
                 number="02"
                 eyebrow="EXPÉRIENCE"
-                title="Près de quatre ans sur le terrain."
+                title="Chaque mission a construit quelque chose."
             />
 
             <div className="relative mt-14 space-y-7">
@@ -425,37 +402,8 @@ export function About() {
                 </p>
 
                 <h3 className="mt-5 max-w-3xl text-5xl font-black leading-[.9] tracking-[-.04em] md:text-7xl">
-                  Du serveur à l'écran, je construis le produit en entier.
+                  Le back me structure. Le front m'exprime.
                 </h3>
-              </div>
-
-              <div>
-                <p className="text-base leading-7 text-white/65">
-                  Côté serveur : PHP (Symfony, Laravel), Java (Spring Boot),
-                  Python (Django), API REST et bases de données. Côté interface :
-                  React, TypeScript et Tailwind. Mon objectif : allier rigueur
-                  technique et identité visuelle.
-                </p>
-
-                <div className="mt-7 flex flex-wrap gap-2">
-                  {[
-                    'React',
-                    'TypeScript',
-                    'Symfony',
-                    'Laravel',
-                    'Java',
-                    'Python',
-                    'API REST',
-                    'MySQL',
-                  ].map((item) => (
-                      <span
-                          key={item}
-                          className="rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-xs font-semibold"
-                      >
-                    {item}
-                  </span>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
@@ -465,7 +413,7 @@ export function About() {
             <SectionIntro
                 number="03"
                 eyebrow="TOOLBOX"
-                title="Les outils du quotidien."
+                title="Ce que j'ai rencontré, projet après projet."
             />
 
             <div className="mt-14 grid gap-5 lg:grid-cols-2">
@@ -496,7 +444,7 @@ export function About() {
 
               {/* Puis 2 colonnes */}
               <SkillCard
-                  title="Design & maquettes"
+                  title="Outils de design"
                   subtitle="Création visuelle"
                   skills={design}
                   color="#f39a62"
@@ -520,7 +468,7 @@ export function About() {
               />
 
               <SkillCard
-                  title="IA & Data"
+                  title="Outils IA & Productivité"
                   subtitle="Workflow"
                   skills={data}
                   color="#a8cce2"
@@ -532,6 +480,47 @@ export function About() {
           <div className="mt-28">
             <SectionIntro
                 number="04"
+                eyebrow="EPITECH"
+                title="Epitech, une école tournée vers l'autonomie."
+            />
+
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mt-12 overflow-hidden rounded-[2rem]"
+            >
+              {/* Bandeau Epitech couleur officielle */}
+              <div className="bg-[#0090D2] px-8 py-8 md:px-12">
+                <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                  <div>
+                    <img src="/logo-epitech.svg" alt="Epitech" className="h-8 w-auto" />
+                  </div>
+                  <span className="text-xs font-black uppercase tracking-[.18em] text-white/80">
+                    Le Kremlin-Bicêtre · 2023 — 2026
+                  </span>
+                </div>
+              </div>
+              {/* Contenu */}
+              <div className="border border-t-0 bg-white/70 p-8 md:p-12" style={{ borderColor: 'var(--color-border)', borderBottomLeftRadius: '2rem', borderBottomRightRadius: '2rem' }}>
+                <div className="grid gap-8 md:grid-cols-3">
+                  <p className="text-base leading-7" style={{ color: 'var(--color-text-muted)' }}>
+                    Pas de professeurs au sens traditionnel. Pas de cours magistraux. À Epitech, on apprend en faisant — un projet, un problème, une deadline.
+                  </p>
+                  <p className="text-base leading-7" style={{ color: 'var(--color-text-muted)' }}>
+                    L'année commence par une <b className="text-[#0090D2]">piscine</b> — une période intensive de plusieurs semaines où on est directement confronté à des projets réels. On apprend à lire de la documentation, à tester, à échouer et à recommencer.
+                  </p>
+                  <p className="text-base leading-7" style={{ color: 'var(--color-text-muted)' }}>
+                    Ensuite, le rythme s'installe : des projets en équipe, des sujets variés, des rendus réguliers. On en ressort avec une façon de penser les problèmes avant de les résoudre.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="mt-28">
+            <SectionIntro
+                number="05"
                 eyebrow="FORMATION"
                 title="Apprendre, comprendre, progresser."
             />

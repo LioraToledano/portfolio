@@ -494,7 +494,7 @@ export function About() {
               <div className="bg-[#0090D2] px-8 py-8 md:px-12">
                 <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                   <div>
-                    <img src="/logo-epitech.svg" alt="Epitech" className="h-8 w-auto" />
+                    <img src={`${import.meta.env.BASE_URL}logo-epitech.svg`} alt="Epitech" className="h-8 w-auto" />
                   </div>
                   <span className="text-xs font-black uppercase tracking-[.18em] text-white/80">
                     Le Kremlin-Bicêtre · 2023 — 2026

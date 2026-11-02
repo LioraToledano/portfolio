@@ -31,7 +31,7 @@ export function Navbar() {
       >
         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="group flex items-center gap-2.5" aria-label="Retour en haut">
           <span className="relative flex h-10 w-10 overflow-hidden rounded-full shadow-sm ring-2 ring-[#eadfe1] transition-transform group-hover:-rotate-6">
-              <img src="/liora-toledano.png" alt="Liora Toledano" className="h-full w-full object-cover object-top" />
+              <img src={`${import.meta.env.BASE_URL}liora-toledano.png`} alt="Liora Toledano" className="h-full w-full object-cover object-top" />
             </span>
           <span className="hidden text-sm font-bold sm:block">Liora Toledano</span>
         </button>

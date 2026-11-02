@@ -2,7 +2,6 @@ import { HashRouter, Route, Routes } from 'react-router-dom'
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
 import { ScrollProgress } from './components/ui/ScrollProgress'
-import { Marquee } from './components/ui/Marquee'
 import { Home } from './pages/Home'
 import { Admin } from './pages/Admin'
 
@@ -13,8 +12,7 @@ function Portfolio() {
       <div className="min-h-screen" style={{ background: 'var(--color-bg)', color: 'var(--color-text)' }}>
         <Navbar />
         <Home />
-        <Marquee />
-        <Footer />
+<Footer />
       </div>
     </>
   )

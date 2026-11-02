@@ -18,7 +18,7 @@ export function Hero() {
     return (
         <section
             ref={ref}
-            className="relative min-h-screen overflow-hidden pt-24"
+            className="relative min-h-screen overflow-x-hidden pt-24"
             aria-label="Présentation"
         >
             <motion.div
@@ -40,7 +40,7 @@ export function Hero() {
 
             <div className="relative mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl -translate-y-16 items-center px-5 py-12 sm:px-7 md:py-20">
                 <div className="grid w-full items-center gap-12 lg:grid-cols-[1.08fr_.92fr] lg:gap-16">
-                    <div className="min-w-0">
+                    <div className="min-w-0 pr-4">
                         <motion.div
                             initial={{ opacity: 0, y: 15 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export function Hero() {
                                 duration: 0.8,
                                 ease: [0.22, 1, 0.36, 1],
                             }}
-                            className="font-display max-w-full text-[clamp(3.05rem,16vw,4.8rem)] font-black leading-[.8] tracking-[-.07em] sm:text-[clamp(4rem,12vw,7.2rem)] lg:text-[clamp(4rem,8vw,7.2rem)] pr-2"
+                            className="font-display max-w-full text-[clamp(3.05rem,16vw,4.8rem)] font-black leading-[.8] tracking-[-.07em] sm:text-[clamp(4rem,12vw,6.8rem)] lg:text-[clamp(4rem,7vw,6.8rem)]"
                         >
                             LIORA
                             <br />
